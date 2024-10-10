@@ -102,6 +102,10 @@ This variable can be modified to specify which version of Metabase you want. Thi
 - [The Atom feed (XML) of latest versions and their changelog](https://cc-metabase.cellar-c2.services.clever-cloud.com/metabase_releases.xml)
 - [The TOML list of all available versions and their changelog](https://cc-metabase.cellar-c2.services.clever-cloud.com/metabase_releases.toml)
 
+{{< callout type="info" >}}
+**You must restart _without cache_ when changing version.** The Metabase JAR is stored in your add-on's build cache so that no time is wasted re-downloading it every time you restart your add-on (or it is restarting as part of a scaling event). This also makes your add-on more resilient: should the downloading be temporarily failing for any reason, this would not prevent restarting/scaling your add-on. To force downloading a different version, make sure to restart the application without build cache (using the `Re-build and restart` button in the [Console]((https://console.clever-cloud.com/)) or the `--without-cache` flag on the [CLI](/doc/cli)).
+{{< /callout >}}
+
 ### Using Metabase Enterprise Edition
 
 Metabase provides an Enterprise Edition (EE) that offers [more features](https://www.metabase.com/docs/latest/paid-features/overview) but requires a license key that must be purchased through their website (see the [pricing page](https://www.metabase.com/pricing/)) EE versions are usually released at the same time as Community Edition (CE) versions, starting with a `1` instead of a `0`.
