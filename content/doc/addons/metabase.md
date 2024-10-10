@@ -89,7 +89,7 @@ They are dimensioned to suit a majority of needs. You can however manage and adj
 The Metabase add-on is a fully managed application, so you don't have to do anything to update it: by default **it is automatically updated** to match the latest Community Edition release. Your add-on will be automatically restarted when a new Metabase release is available, but thanks to Clever Cloud this will be done without downtime. All deployed versions are reviewed and tested before being released.
 
 Of course, you have full control other this. The Java application of your Metabase add-on contains a `CC_METABASE_VERSION` environment variable.
-This variable can be modified to specify which version of Metabase you want. This variable must contain a value that is either a special keyword or a [SemVer](https://semver.org/) version requirement (the only difference with SemVer is that `x.y.z` is interpreted as `=x.y.z` instead of `^x.y.z`.) :
+This variable can be modified to specify which version of Metabase you want. This variable must contain a value that is either a special keyword or a [SemVer](https://semver.org/) version requirement (the only difference with SemVer is that `x.y.z` is interpreted as `=x.y.z` instead of `^x.y.z`.):
 
 - `CC_METABASE_VERSION=community-latest` (_default_): use the latest version of the Community Edition _(same as `0`, `0.*`, `^0` or empty)
 - `CC_METABASE_VERSION=0.50.3`: use the `0.50.3` version _(same as `=0.50.3`)
